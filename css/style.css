@@ -10,21 +10,43 @@ header {
 
 /* MAIN */
 main {
+    display: flex;
     height: calc(100vh - 80px);
 }
 
-main > .container-fluid, .row, [class*="col-"] {
-    /* DEBUG */
-    height: 100%;
-}
-
-main > .row, [class*="col-"]:nth-child(1) {
+/* main sidebar */
+#main_sidebar {
+    width: 80px;
+    flex-shrink: 0;
     /* DEBUG */
     background-color: blue;
 }
 
-
-main > .row, [class*="col-"]:nth-child(2) {
+/* contenuto main */
+#main_content {
+    flex-grow: 1;
+    overflow-y: auto;
     /* DEBUG */
-    background-color: green;   
+    background-color: green;
+}
+
+#main_content_topbar {
+    margin-bottom: 25px;
+    /* DEBUG */
+    background-color: aqua;
+    height: 200px;
+    width: 100%;
+}
+
+[class*="col-"] {
+    /* DEBUG */
+    background-color: yellow;
+    border: 1px solid;
+    height: 400px;
+}
+.col {
+    /* DEBUG */
+    background-color: azure;
+    border: 1px solid;
+    height: 200px;
 }
