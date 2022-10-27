@@ -1,0 +1,30 @@
+/* GENERALI */
+
+
+/* HEADER */
+header {
+    height: 80px;
+    /* DEBUG */
+    background-color: red;
+}
+
+/* MAIN */
+main {
+    height: calc(100vh - 80px);
+}
+
+main > .container-fluid, .row, [class*="col-"] {
+    /* DEBUG */
+    height: 100%;
+}
+
+main > .row, [class*="col-"]:nth-child(1) {
+    /* DEBUG */
+    background-color: blue;
+}
+
+
+main > .row, [class*="col-"]:nth-child(2) {
+    /* DEBUG */
+    background-color: green;   
+}
