@@ -3,9 +3,11 @@
 
 /* HEADER */
 header {
+    display: flex;
+    align-items: center;
     height: 80px;
-    /* DEBUG */
-    background-color: red;
+    padding: 10px 5px;
+    background-color: rgb(235, 235, 235);
 }
 
 /* MAIN */
@@ -49,4 +51,12 @@ main {
     background-color: azure;
     border: 1px solid;
     height: 200px;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width:992px) {
+    
+    #main_sidebar {
+        width: 200px;
+    }
 }
