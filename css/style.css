@@ -7,6 +7,10 @@
     background-color: rgb(22, 91, 186);
 }
 
+.bg-lightgrey {
+    background-color: rgb(247, 247, 247);
+}
+
 ul {
     list-style-type: none;
 }
@@ -77,11 +81,9 @@ main {
 #main_content {
     flex-grow: 1;
     overflow-y: auto;
-    /* DEBUG */
-    background-color: green;
 }
 
-/* main topbar */
+/* main content topbar */
 #main_content_topbar {
     width: 100%;
     color: #fff;
@@ -89,6 +91,16 @@ main {
     padding: 20px 0;
     margin-bottom: 25px;
 }
+
+/* main content mid */
+/* .container_block {
+    border: 1px solid;
+    padding: 5px 10px;
+}
+
+.container_block_top {
+    border-bottom: 1px solid;
+} */
 
 [class*="col-"] {
     /* DEBUG */
