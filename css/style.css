@@ -93,27 +93,38 @@ main {
 }
 
 /* main content mid */
-/* .container_block {
-    border: 1px solid;
-    padding: 5px 10px;
+
+/* block table */
+.main_content_mid_block_center table {
+    width: 100%;
 }
 
-.container_block_top {
-    border-bottom: 1px solid;
-} */
+.main_content_mid_block_center th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 6px;
+}
+
+.code {
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(242, 101, 81);
+}
+/* content mid block */
+/* .content_mid_block {
+    border: 1px solid;
+}
 
 [class*="col-"] {
-    /* DEBUG */
-    /* background-color: yellow;
+    
+    background-color: red;
     border: 1px solid;
-    height: 400px; */
 }
 .col {
-    /* DEBUG */
-    /* background-color: azure;
+    
+    background-color: azure;
     border: 1px solid;
-    height: 200px; */
-}
+} */
 
 /* RESPONSIVE */
 @media screen and (min-width:992px) {
