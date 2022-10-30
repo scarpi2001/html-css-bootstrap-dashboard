@@ -25,10 +25,10 @@
 
             <!-- search bar -->
             <div id="header_nav_search">
-                <input class="ms_search form-control bg-secondary bg-opacity-25" type="search" placeholder="Search" aria-label="Search"> 
+                <input class="ms_search form-control bg-secondary bg-opacity-25" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search"> 
             </div>
 
-             <!-- menu and dropdown element-->
+             <!-- menu -->
             <div id="header_nav_dropdown">
                 <ul class="navbar-nav flex-row justify-content-around">
                     <li class="d-none d-lg-block">
@@ -40,6 +40,7 @@
                     <li class="d-none d-lg-block">
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </li>
+                    <!-- menu dropdown element bootstrap -->
                     <li class="nav-item dropdown">
                         <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-bell text-gold"></i>
@@ -104,18 +105,18 @@
                         <!-- file history -->
                         <div class="col-12 col-lg-5">
                             <span class="h2">Boolean</span>
-                            <span class="badge rounded-pill bg-blue">Piano Blaze</span>
+                            <span class="badge rounded-pill bg-blue btn btn-primary">Piano Blaze</span>
                             <div class="my-3">
-                                <span class="badge rounded-pill bg-blue">3 app</span>
+                                <span class="badge rounded-pill bg-blue btn btn-primary">3 app</span>
                                 <span>
                                     <i class="fa-solid fa-angles-right"></i>
                                 </span> 
-                                <span class="badge rounded-pill bg-blue d-lg-none">
+                                <span class="badge rounded-pill bg-blue btn btn-primary d-lg-none">
                                     <i class="fa-solid fa-plus"></i>
                                 </span>
-                                <span class="badge rounded-pill bg-blue d-none d-lg-inline-block">Boolean mobile app</span>
-                                <span class="badge rounded-pill bg-blue d-none d-lg-inline-block">Boolean web app</span>
-                                <span class="badge rounded-pill bg-blue d-none d-lg-inline-block">Boolean blog app</span>
+                                <span class="badge rounded-pill bg-blue btn btn-primary d-none d-lg-inline-block">Boolean mobile app</span>
+                                <span class="badge rounded-pill bg-blue btn btn-primary d-none d-lg-inline-block">Boolean web app</span>
+                                <span class="badge rounded-pill bg-blue btn btn-primary d-none d-lg-inline-block">Boolean blog app</span>
                             </div>
                         </div>
 
@@ -136,8 +137,54 @@
                             <!-- mid block Prossime classi -->
                             <div class="main_content_mid_block border rounded mb-4">
                                 <!-- mid block top -->
-                                <div class="main_content_mid_block_top border-bottom bg-lightgrey py-1 px-3">
+                                <div class="main_content_mid_block_top d-flex justify-content-between border-bottom bg-lightgrey py-1 px-3">
                                     <h2>Prossime classi</h2>
+                                    <!-- offcanvas bootstrap -->
+                                    <button
+                                    class="btn btn-outline-primary"
+                                    type="button"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasExample"
+                                    aria-controls="offcanvasExample"
+                                    >
+                                    <i class="fa-sharp fa-solid fa-plus"></i>
+                                    </button>
+
+                                    <div
+                                    class="offcanvas offcanvas-end"
+                                    tabindex="-1"
+                                    id="offcanvasExample"
+                                    aria-labelledby="offcanvasExampleLabel"
+                                    >
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                                        Aggiungi classe
+                                        </h5>
+                                        <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="offcanvas"
+                                        aria-label="Close"
+                                        ></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <form action="#">
+                                        <label for="classe">Nome</label>
+                                        <input
+                                            class="w-100 my-2"
+                                            id="classe"
+                                            type="text"
+                                            placeholder="classe ---"
+                                        />
+
+                                        <label for="data">Data inizio</label>
+                                        <input class="w-100 my-2" id="data" type="date" />
+                                        <button class="btn btn-primary">Salva</button>
+                                        <button class="btn btn-warning">Reset</button>
+                                        </form>
+                                    </div>
+                                    </div>
+                                  
                                 </div>
                                 <!-- mid block center -->
                                 <div class="main_content_mid_block_center py-4 px-3">
@@ -148,8 +195,8 @@
                                             <!-- table row -->
                                             <tr>
                                                 <th class="w-40">Nome</th>
-                                                <th class="text-center">Data inizio</th>
-                                                <th class="text-center">ROI</th>
+                                                <th class="ms_td_fst text-center">Data inizio</th>
+                                                <th class="ms_td_sdn text-center">ROI</th>
                                                 <th class="text-center">Stato</th>
                                                 <th class="text-center">Azioni</th>
                                             </tr>
@@ -167,18 +214,18 @@
                                                     <span class="ms-2">Classe 75</span> 
                                                 </div>
                                             </td>
-                                            <td class="text-center">15 Feb 2021</td>
-                                            <td class="text-center">20%</td>
+                                            <td class="ms_td_fst text-center">15 Feb 2021</td>
+                                            <td class="ms_td_sdn text-center">20%</td>
                                             <td class="text-center">
                                                 <span class="ms_label text-light done">Done</span>
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-pencil text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
                                                     </span>
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-trash text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash"></i>
                                                     </span>
                                                 </div>
                                             </td>
@@ -193,18 +240,18 @@
                                                     <span class="ms-2">Classe 76</span> 
                                                 </div>
                                             </td>
-                                            <td class="text-center">16 Feb 2021</td>
-                                            <td class="text-center">20%</td>
+                                            <td class="ms_td_fst text-center">16 Feb 2021</td>
+                                            <td class="ms_td_sdn text-center">20%</td>
                                             <td class="text-center">
                                                 <span class="ms_label text-light done">Done</span>
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-pencil text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
                                                     </span>
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-trash text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash"></i>
                                                     </span>
                                                 </div>
                                             </td>
@@ -219,18 +266,18 @@
                                                     <span class="ms-2">Classe 77</span> 
                                                 </div>
                                             </td>
-                                            <td class="text-center">17 Feb 2021</td>
-                                            <td class="text-center">20%</td>
+                                            <td class="ms_td_fst text-center">17 Feb 2021</td>
+                                            <td class="ms_td_sdn text-center">20%</td>
                                             <td class="text-center">
                                                 <span class="ms_label text-light process">process</span>
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-pencil text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
                                                     </span>
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-trash text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash"></i>
                                                     </span>
                                                 </div>
                                             </td>
@@ -245,18 +292,18 @@
                                                     <span class="ms-2">Classe 78</span> 
                                                 </div>
                                             </td>
-                                            <td class="text-center">18 Feb 2021</td>
-                                            <td class="text-center">20%</td>
+                                            <td class="ms_td_fst text-center">18 Feb 2021</td>
+                                            <td class="ms_td_sdn text-center">20%</td>
                                             <td class="text-center">
                                                 <span class="ms_label text-light done">Done</span>
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-pencil text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
                                                     </span>
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-trash text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash"></i>
                                                     </span>
                                                 </div>
                                             </td>
@@ -271,18 +318,18 @@
                                                     <span class="ms-2">Classe 79</span> 
                                                 </div>
                                             </td>
-                                            <td class="text-center">19 Feb 2021</td>
-                                            <td class="text-center">20%</td>
+                                            <td class="ms_td_fst text-center">19 Feb 2021</td>
+                                            <td class="ms_td_sdn text-center">20%</td>
                                             <td class="text-center">
                                                 <span class="ms_label text-light failed">failed</span>
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-pencil text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
                                                     </span>
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-trash text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash"></i>
                                                     </span>
                                                 </div>
                                             </td>
@@ -297,18 +344,18 @@
                                                     <span class="ms-2">Classe 80</span> 
                                                 </div>
                                             </td>
-                                            <td class="text-center">20 Feb 2021</td>
-                                            <td class="text-center">20%</td>
+                                            <td class="ms_td_fst text-center">20 Feb 2021</td>
+                                            <td class="ms_td_sdn text-center">20%</td>
                                             <td class="text-center">
                                                 <span class="ms_label text-light done">Done</span>
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-pencil text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
                                                     </span>
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-trash text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash"></i>
                                                     </span>
                                                 </div>
                                             </td>
@@ -323,18 +370,18 @@
                                                     <span class="ms-2">Classe 81</span> 
                                                 </div>
                                             </td>
-                                            <td class="text-center">81 Feb 2021</td>
-                                            <td class="text-center">20%</td>
+                                            <td class="ms_td_fst text-center">21 Feb 2021</td>
+                                            <td class="ms_td_sdn text-center">20%</td>
                                             <td class="text-center">
                                                 <span class="ms_label text-light failed">failed</span>
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-pencil text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
                                                     </span>
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-trash text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash"></i>
                                                     </span>
                                                 </div>
                                             </td>
@@ -349,18 +396,18 @@
                                                     <span class="ms-2">Classe 82</span> 
                                                 </div>
                                             </td>
-                                            <td class="text-center">22 Feb 2021</td>
-                                            <td class="text-center">20%</td>
+                                            <td class="ms_td_fst text-center">22 Feb 2021</td>
+                                            <td class="ms_td_sdn text-center">20%</td>
                                             <td class="text-center">
                                                 <span class="ms_label text-light done">Done</span>
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-pencil text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
                                                     </span>
-                                                    <span class="action">
-                                                        <i class="fa-solid fa-trash text-secondary"></i>
+                                                    <span class="action btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash"></i>
                                                     </span>
                                                 </div>
                                             </td>
@@ -424,20 +471,20 @@
                                 </div>
                                 <!-- mid block center -->
                                 <div class="main_content_mid_block_center py-4 px-3">
-                                        <ul class="border rounded p-0 m-0">
-                                            <li class="border-bottom p-3">
-                                                <input type="checkbox">
-                                                <span>Kickoff nuove classi</span>
-                                            </li>
-                                            <li class="border-bottom p-3">
-                                                <input type="checkbox">
-                                                <span>Lezione su Bootstrap 5 in classe #75</span>
-                                            </li>
-                                            <li class="border-bottom p-3">
-                                                <input type="checkbox">
-                                                <span>Controllare username GitHub studenti</span>
-                                            </li>
-                                        </ul>
+                                    <ul class="border rounded p-0 m-0">
+                                        <li class="border-bottom p-2">
+                                            <input type="checkbox">
+                                            <span>Kickoff nuove classi</span>
+                                        </li>
+                                        <li class="border-bottom p-2">
+                                            <input type="checkbox">
+                                            <span>Lezione su Bootstrap 5 in classe #75</span>
+                                        </li>
+                                        <li class="border-bottom p-2">
+                                            <input type="checkbox">
+                                            <span>Controllare username GitHub studenti</span>
+                                        </li>
+                                    </ul>
                                 </div>  
                             </div>
 
@@ -445,48 +492,33 @@
                             <div class="main_content_mid_block border rounded mb-4">
                                 <!-- mid block center -->
                                 <div class="main_content_mid_block_center py-4 px-3">
-                                        <ul class="border rounded p-0 m-0">
-                                            <li class="border-bottom p-3">
-                                               <img class="img-fluid" src="img/stats.jpeg" alt="stats"> 
-                                                <h3>Utenti attivi</h3>
-                                                <span>Lista degli utenti attivi in piattaforma nell'ultimo mese</span>
-                                            </li>
-                                            <li class="border-bottom p-3">
-                                                
-                                                Lezione su Bootstrap 5 in classe #75
-                                            </li>
-                                            <li class="border-bottom p-3">
-                                                
-                                                Controllare username GitHub studenti
-                                            </li>
-                                        </ul>
+                                    <ul class="border rounded p-0 m-0">
+                                        <li class="border-bottom p-3">
+                                            <img class="img-fluid" src="img/stats.jpeg" alt="stats"> 
+                                            <h4>Utenti attivi</h4>
+                                            <span>Lista degli utenti attivi in piattaforma nell'ultimo mese</span>
+                                        </li>
+                                        <li class="border-bottom p-2">
+                                            <span>Gennaio: 1200</span>
+                                        </li>
+                                        <li class="border-bottom p-2">
+                                            <span>Febbraio: 800</span>  
+                                        </li>
+                                        <li class="border-bottom p-2">
+                                            <span>Marzo: 1500</span>
+                                        </li>
+                                        <li class="border-bottom p-2">
+                                            <a href="#">Visualizza report approfondito</a>
+                                        </li>
+                                    </ul>
                                 </div>  
-                            </div>
-                           
+                            </div> 
                         </div>
                     </div>
                 </div>
             </div>
-            
-
         </section>
     </main>
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
