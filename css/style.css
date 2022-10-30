@@ -64,7 +64,7 @@ main {
 #main_sidebar {
     width: 80px;
     flex-shrink: 0;
-    padding: 25px 30px;
+    padding: 25px 0;
     color: #fff;
     background-color: rgb(5, 30, 52);
 }
@@ -76,6 +76,28 @@ main {
     justify-content: space-between;
     height: 100%;
 }
+
+/* nav general */
+#main_sidebar_nav li {
+    position: relative;
+    padding: 5px;
+}
+
+.hover_background {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#main_sidebar_nav li:hover .hover_background {
+    display: block;
+    cursor: pointer;
+}
+
 
 /* main content */
 #main_content {
@@ -154,7 +176,6 @@ main {
 
     #main_sidebar {
         width: 160px;
-        padding: 25px 35px;
     }
 
 }
